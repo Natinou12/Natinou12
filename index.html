@@ -1,21 +1,179 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meu Site no GitHub Pages</title>
-  <style>
-    body {font-family: system-ui, sans-serif; background: #f5f7fa; margin: 0; padding: 40px;}
-    .container {max-width: 700px; margin: auto; background: #fff; border-radius: 10px; padding: 30px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);}
-    h1 {color: #2563eb;}
-    p {font-size: 18px;}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Natinou — about</title>
+<meta name="description" content="Página sobre Natinou — simples, roxa e direta." />
+
+<style>
+  :root{
+    --bg:#0c0713;
+    --panel:#110a1f;
+    --muted:#9d8fb1;
+    --accent:#b065ff;   /* roxo principal */
+    --accent-2:#9b5cff; /* roxo secundário */
+    --text:#eae4ff;
+    --mono:"JetBrains Mono", "Roboto Mono", monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+
+  html,body{
+    height:100%;margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+  }
+
+  .wrap{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:calc(6vh) 20px;
+  }
+
+  .card{
+    width:min(900px, 96vw);
+    background:linear-gradient(160deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border:1px solid rgba(255,255,255,0.05);
+    padding:40px;
+    border-radius:16px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.6);
+    display:grid;
+    grid-template-columns: 1fr 300px;
+    gap:28px;
+    align-items:start;
+  }
+
+  h1{
+    font-size: clamp(32px, 6vw, 54px);
+    color:var(--accent);
+    margin:0 0 10px;
+    font-weight:700;
+    letter-spacing:-0.02em;
+  }
+
+  .byline{
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:20px;
+  }
+
+  .blurb{
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:20px;
+    max-width:60ch;
+  }
+
+  .links{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+
+  .links a{
+    text-decoration:none;
+    font-weight:600;
+    color:var(--accent);
+    padding:8px 12px;
+    border-radius:8px;
+    border:1px solid rgba(176,101,255,0.2);
+    background:rgba(176,101,255,0.06);
+    font-family:var(--sans);
+    font-size:14px;
+    transition:all .15s;
+  }
+
+  .links a:hover{
+    background:rgba(176,101,255,0.15);
+    transform:translateY(-2px);
+  }
+
+  .meta{
+    border-radius:12px;
+    padding:20px;
+    border:1px solid rgba(255,255,255,0.05);
+    background:linear-gradient(180deg, rgba(176,101,255,0.05), rgba(176,101,255,0.02));
+  }
+
+  .avatar{
+    width:90px;height:90px;border-radius:16px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:flex;align-items:center;justify-content:center;
+    color:#100021;font-weight:800;font-family:var(--mono);
+    font-size:24px;margin-bottom:14px;
+  }
+
+  .meta h3{margin:0 0 6px;font-size:16px}
+  .meta p{margin:0 0 12px;color:var(--muted);font-size:13px}
+
+  .meta .small-links{display:flex;flex-direction:column;gap:8px}
+  .meta .small-links a{
+    color:var(--accent);
+    text-decoration:none;
+    font-size:13px;
+    font-family:var(--mono);
+    transition:color .15s;
+  }
+  .meta .small-links a:hover{color:var(--text)}
+
+  footer{margin-top:20px;color:var(--muted);font-size:12px;text-align:center}
+
+  @media(max-width:880px){
+    .card{grid-template-columns:1fr;padding:26px;}
+    .meta{order:2}
+  }
+
+  .asciifooter{
+    margin-top:20px;
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--muted);
+    line-height:1.5;
+    white-space:pre-wrap;
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>🎉 Olá, mundo!</h1>
-    <p>Este é o meu primeiro site hospedado de graça no GitHub Pages!</p>
-    <p>Editando este arquivo eu posso atualizar meu site a qualquer momento.</p>
-  </div>
+  <main class="wrap">
+    <section class="card">
+      <div class="left">
+        <h1>natinou</h1>
+        <div class="byline">sem filtros. só eu.</div>
+
+        <div class="blurb">
+          👋 oi, eu sou o <strong>Natinou</strong> — gosto de sons, código e estética.  
+          curto explorar coisas novas e mexer em ideias só por curiosidade.  
+          este site é simples, direto e meio roxo (porque roxo é top).
+        </div>
+
+        <div class="links">
+          <a href="https://github.com/natinou12" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:natinou.contact@gmail.com">Contato</a>
+          <a href="#">Mais em breve</a>
+        </div>
+
+        <div class="asciifooter">
+/* nato @ 2025
+   purple, static & chill */
+        </div>
+      </div>
+
+      <aside class="meta">
+        <div class="avatar">N⁰</div>
+        <h3>natinou</h3>
+        <p>curioso, às vezes caótico, mas sempre tentando aprender.</p>
+
+        <div class="small-links">
+          <a href="#">• hobbies</a>
+          <a href="#">• projetos</a>
+          <a href="#">• sons</a>
+        </div>
+        <footer>feito com 💜 e GitHub Pages</footer>
+      </aside>
+    </section>
+  </main>
 </body>
 </html>
