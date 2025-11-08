@@ -11,39 +11,23 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
     }
 
-    /* Caixa do Canva */
-    .canva-box {
-      position: relative;
-      width: 90%;
-      max-width: 1000px;
-      box-shadow: 0 2px 8px rgba(63,69,81,0.16);
-      border-radius: 8px;
-      overflow: hidden;
+    /* esconde o link de crédito do Canva */
+    a[href*="canva.com/design"] {
+      display: none !important;
     }
 
-    iframe {
-      width: 100%;
-      height: 80vh;
-      border: none;
-      display: block;
-    }
-
-    /* Esconde o crédito "Natinou de Natinou" */
-    .canva-credit {
-      display: none;
-    }
-
-    /* Estrela girando */
+    /* estrela girando */
     .estrela {
-      position: absolute;
-      top: 15px;
-      right: 15px;
+      position: fixed;
+      top: 20px;
+      right: 20px;
       font-size: 50px;
       color: gold;
       animation: girar 5s linear infinite;
+      z-index: 10;
     }
 
     @keyframes girar {
@@ -53,13 +37,20 @@
   </style>
 </head>
 <body>
-  <div class="canva-box">
-    <iframe 
-      src="https://www.canva.com/design/DAG4JbarIsg/C_4zqRs7qxds6qWPvhD63Q/view?embed" 
-      allowfullscreen>
+  <div style="position: relative; width: 100%; max-width: 900px; height: 0; padding-top: 112.4451%;
+   box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin: 1.6em 0; overflow: hidden;
+   border-radius: 8px; will-change: transform;">
+    <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;"
+      src="https://www.canva.com/design/DAG4JbarIsg/C_4zqRs7qxds6qWPvhD63Q/view?embed"
+      allowfullscreen="allowfullscreen" allow="fullscreen">
     </iframe>
-    <div class="estrela">⭐</div>
-    <p class="canva-credit">Natinou de Natinou</p>
   </div>
+
+  <!-- o link original fica aqui, mas será escondido -->
+  <a href="https://www.canva.com/design/DAG4JbarIsg/C_4zqRs7qxds6qWPvhD63Q/view?utm_content=DAG4JbarIsg&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener">
+    Natinou
+  </a>
+
+  <div class="estrela">⭐</div>
 </body>
 </html>
