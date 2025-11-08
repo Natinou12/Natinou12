@@ -3,177 +3,153 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Natinou — about</title>
-<meta name="description" content="Página sobre Natinou — simples, roxa e direta." />
+<title>"Natinou" S. — Eu.</title>
+<meta name="description" content="Só um cara que gosta de programação, jogos e música." />
 
 <style>
   :root{
     --bg:#0c0713;
-    --panel:#110a1f;
+    --text:#eae4ff;
     --muted:#9d8fb1;
     --accent:#b065ff;   /* roxo principal */
     --accent-2:#9b5cff; /* roxo secundário */
-    --text:#eae4ff;
-    --mono:"JetBrains Mono", "Roboto Mono", monospace;
+    --wave:#8b4fff;
     --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   }
 
   html,body{
-    height:100%;margin:0;
+    margin:0;
+    padding:0;
     background:var(--bg);
     color:var(--text);
     font-family:var(--sans);
+    scroll-behavior: smooth;
   }
 
-  .wrap{
-    min-height:100vh;
+  body {
     display:flex;
+    flex-direction:column;
     align-items:center;
-    justify-content:center;
-    padding:calc(6vh) 20px;
   }
 
-  .card{
-    width:min(900px, 96vw);
-    background:linear-gradient(160deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-    border:1px solid rgba(255,255,255,0.05);
-    padding:40px;
-    border-radius:16px;
-    box-shadow:0 10px 40px rgba(0,0,0,0.6);
-    display:grid;
-    grid-template-columns: 1fr 300px;
-    gap:28px;
-    align-items:start;
+  main{
+    width:90%;
+    max-width:900px;
+    padding:60px 20px;
+    display:flex;
+    flex-direction:column;
+    gap:40px;
   }
 
   h1{
-    font-size: clamp(32px, 6vw, 54px);
+    font-size:clamp(48px, 8vw, 80px);
     color:var(--accent);
-    margin:0 0 10px;
-    font-weight:700;
-    letter-spacing:-0.02em;
+    margin:0;
   }
 
-  .byline{
-    color:var(--muted);
-    font-size:14px;
-    margin-bottom:20px;
+  h2{
+    font-size:clamp(24px, 4vw, 36px);
+    color:var(--text);
+    margin:0 0 20px 0;
   }
 
-  .blurb{
-    font-size:16px;
+  p{
+    font-size:18px;
     line-height:1.6;
-    margin-bottom:20px;
-    max-width:60ch;
+    max-width:700px;
   }
 
-  .links{
+  /* separação em onda */
+  .wave-container{
+    width:100%;
+    height:80px;
+    overflow:hidden;
+    position:relative;
+  }
+
+  .wave{
+    background:var(--wave);
+    width:200%;
+    height:100%;
+    border-radius: 100% 100% 0 0;
+    position:absolute;
+    top:0;
+    left:0;
+    animation: waveMove 6s linear infinite;
+  }
+
+  @keyframes waveMove{
+    0%{transform: translateX(0);}
+    50%{transform: translateX(-50%);}
+    100%{transform: translateX(0);}
+  }
+
+  /* player visual */
+  .player{
     display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-  }
-
-  .links a{
-    text-decoration:none;
-    font-weight:600;
-    color:var(--accent);
-    padding:8px 12px;
-    border-radius:8px;
-    border:1px solid rgba(176,101,255,0.2);
-    background:rgba(176,101,255,0.06);
-    font-family:var(--sans);
-    font-size:14px;
-    transition:all .15s;
-  }
-
-  .links a:hover{
-    background:rgba(176,101,255,0.15);
-    transform:translateY(-2px);
-  }
-
-  .meta{
+    align-items:center;
+    gap:20px;
+    background:rgba(176,101,255,0.1);
+    padding:14px 20px;
     border-radius:12px;
-    padding:20px;
-    border:1px solid rgba(255,255,255,0.05);
-    background:linear-gradient(180deg, rgba(176,101,255,0.05), rgba(176,101,255,0.02));
+    width:fit-content;
+    margin-top:-40px; /* puxando sobre a onda */
   }
 
-  .avatar{
-    width:90px;height:90px;border-radius:16px;
-    background:linear-gradient(135deg,var(--accent),var(--accent-2));
-    display:flex;align-items:center;justify-content:center;
-    color:#100021;font-weight:800;font-family:var(--mono);
-    font-size:24px;margin-bottom:14px;
+  .player img{
+    width:60px;
+    height:60px;
+    border-radius:8px;
+    object-fit:cover;
   }
 
-  .meta h3{margin:0 0 6px;font-size:16px}
-  .meta p{margin:0 0 12px;color:var(--muted);font-size:13px}
+  .player-info{
+    display:flex;
+    flex-direction:column;
+  }
 
-  .meta .small-links{display:flex;flex-direction:column;gap:8px}
-  .meta .small-links a{
+  .player-info span{
     color:var(--accent);
-    text-decoration:none;
-    font-size:13px;
-    font-family:var(--mono);
-    transition:color .15s;
-  }
-  .meta .small-links a:hover{color:var(--text)}
-
-  footer{margin-top:20px;color:var(--muted);font-size:12px;text-align:center}
-
-  @media(max-width:880px){
-    .card{grid-template-columns:1fr;padding:26px;}
-    .meta{order:2}
+    font-weight:600;
+    font-size:16px;
   }
 
-  .asciifooter{
-    margin-top:20px;
-    font-family:var(--mono);
-    font-size:12px;
+  .player-info small{
+    color:var(--text);
+    font-size:14px;
+  }
+
+  footer{
+    margin:40px 0;
+    font-size:14px;
     color:var(--muted);
-    line-height:1.5;
-    white-space:pre-wrap;
+    text-align:center;
   }
+
 </style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="card">
-      <div class="left">
-        <h1>natinou</h1>
-        <div class="byline">sem filtros. só eu.</div>
+  <main>
+    <h1>"Natinou" S.</h1>
+    <h2>Eu.</h2>
 
-        <div class="blurb">
-          👋 oi, eu sou o <strong>Natinou</strong> — gosto de sons, código e estética.  
-          curto explorar coisas novas e mexer em ideias só por curiosidade.  
-          este site é simples, direto e meio roxo (porque roxo é top).
-        </div>
+    <p>Só um cara que gosta de programação, jogos e música.</p>
 
-        <div class="links">
-          <a href="https://github.com/natinou12" target="_blank" rel="noopener">GitHub</a>
-          <a href="mailto:natinou.contact@gmail.com">Contato</a>
-          <a href="#">Mais em breve</a>
-        </div>
+    <!-- separação onda -->
+    <div class="wave-container">
+      <div class="wave"></div>
+    </div>
 
-        <div class="asciifooter">
-/* nato @ 2025
-   purple, static & chill */
-        </div>
+    <!-- player visual -->
+    <div class="player">
+      <img src="https://i.imgur.com/7RkQ7zX.jpg" alt="Capa da música">
+      <div class="player-info">
+        <span>It's Going Down Now</span>
+        <small>Persona</small>
       </div>
+    </div>
 
-      <aside class="meta">
-        <div class="avatar">N⁰</div>
-        <h3>natinou</h3>
-        <p>curioso, às vezes caótico, mas sempre tentando aprender.</p>
-
-        <div class="small-links">
-          <a href="#">• hobbies</a>
-          <a href="#">• projetos</a>
-          <a href="#">• sons</a>
-        </div>
-        <footer>feito com 💜 e GitHub Pages</footer>
-      </aside>
-    </section>
+    <footer>feito com 💜 e GitHub Pages</footer>
   </main>
 </body>
 </html>
