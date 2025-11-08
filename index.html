@@ -1,8 +1,172 @@
-<div style="position: relative; width: 100%; height: 0; padding-top: 112.4451%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAG4JbarIsg/C_4zqRs7qxds6qWPvhD63Q/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG4JbarIsg&#x2F;C_4zqRs7qxds6qWPvhD63Q&#x2F;view?utm_content=DAG4JbarIsg&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Pah</a> de Natinou
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Natinou S.</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Roboto:400" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #24003E;
+      color: #fff;
+      min-height: 100vh;
+    }
+    .wave-top {
+      width: 100vw;
+      min-width: 100%;
+      height: 22px;
+      background: linear-gradient(to right, #a876fa 0%, #a876fa 100%);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+    .wave {
+      width: 100vw;
+      min-width: 100%;
+      height: 25px;
+      background: url('data:image/svg+xml;utf8,<svg width="1440" height="25" viewBox="0 0 1440 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 25C120 10 360 0 720 0C1080 0 1320 10 1440 25V26H0V25Z" fill="%23a876fa"/></svg>');
+      background-repeat: repeat-x;
+      background-size: auto 25px;
+      margin-top: -1px;
+      margin-bottom: 16px;
+    }
+    .container { max-width: 900px; margin: 56px auto 0 auto; position: relative; padding: 0 3vw; }
+    .header-row { display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between; }
+    .big-title {
+      color: #a876fa;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 2.7em;
+      font-weight: bold;
+      margin-bottom: 14px;
+      margin-top: 10px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .star {
+      width: 210px;
+      height: 210px;
+      margin-top: -16px;
+      margin-right: 10px;
+      flex-shrink: 0;
+      animation: star-spin 3s linear infinite;
+      filter: drop-shadow(0 0 16px #a876fa99);
+    }
+    @keyframes star-spin { to { transform: rotate(360deg); } }
+    .about-title { font-weight:bold; margin-bottom: 9px; font-size: 1.12em; }
+    .about-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      font-size: 1.13em;
+      line-height: 1.53em;
+    }
+    .about-list .flag { vertical-align: middle; width: 22px; height: 17px; margin-left: 4px; }
+    .games-section-title {
+      font-weight: bold;
+      font-size: 1.35em;
+      margin: 36px 0 25px 0;
+      text-align: center;
+    }
+    .games-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 56px;
+      margin-bottom: 38px;
+      margin-top: 8px;
+    }
+    .game-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 170px;
+      transition: filter 0.2s, box-shadow 0.2s;
+      border-radius: 18px;
+      background: transparent;
+      padding: 12px 0 0 0;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.23em;
+    }
+    .game-block img {
+      width: 78px;
+      height: 78px;
+      margin-bottom: 8px;
+      border-radius:16px;
+      background: #24003E;
+      box-shadow: 0 2px 28px #4d1180;
+      transition: box-shadow 0.2s;
+    }
+    .game-block:hover, .game-block:focus {
+      filter: drop-shadow(0 0 16px #b62eff);
+      box-shadow: 0 0 28px 7px #b62effd7;
+    }
+    .game-block:hover img, .game-block:focus img {
+      box-shadow: 0 0 34px 8px #b62eff, 0 2px 28px #4d1180;
+      background: #b62eff33;
+    }
+    .footer-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 30px;
+      font-size: 1.09em;
+      width: 100%;
+    }
+    .final-msg { margin-left: 6px; }
+    .github-note { color: #dbcaf9; margin-right: 8px; }
+    @media (max-width: 760px) {
+      .header-row { flex-direction: column; align-items: flex-start; }
+      .star { margin: 16px auto 0 auto; }
+      .games-row { gap: 28px; }
+      .game-block { width: 140px; font-size: 1em; }
+      .container { margin-top: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wave-top"></div>
+  <div class="wave"></div>
+  <div class="container">
+    <div class="header-row">
+      <div>
+        <div class="big-title">“Natinou” S.</div>
+        <div class="about-title">Sobre mim:</div>
+        <ul class="about-list">
+          <li>Brasileiro <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="Brasil" class="flag"></li>
+          <li>Programação = Legal</li>
+          <li>Strogonoff = Foda</li>
+          <li>Jogos = Vida</li>
+          <li>Música = Foda tbm</li>
+          <li>Xadrez = Legal</li>
+        </ul>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Star_full_white.svg/2048px-Star_full_white.svg.png" alt="Star" class="star" style="filter:drop-shadow(0 0 8px #a876fa)">
+    </div>
+    <div class="games-section-title">Jogos que eu to jogando no momento:</div>
+    <div class="games-row">
+      <div class="game-block" tabindex="0">
+        <img src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/37/Tree.png" alt="Terraria Tree">
+        Terraria
+      </div>
+      <div class="game-block" tabindex="0">
+        <img src="https://static.wikia.nocookie.net/corekeeper_gamepedia/images/f/fa/Core_Logo.png" alt="Core Keeper Icon">
+        Core Keeper
+      </div>
+      <div class="game-block" tabindex="0">
+        <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/00/Grass_Block.png" alt="Minecraft Block">
+        Minecraft: Java edition
+      </div>
+    </div>
+    <div class="footer-row">
+      <div class="final-msg">É isso :)</div>
+      <div class="github-note">Feito usando o Github Pages.</div>
+    </div>
+  </div>
+</body>
+</html>
