@@ -38,7 +38,7 @@
     padding:60px 20px;
     display:flex;
     flex-direction:column;
-    gap:40px;
+    gap:60px;
   }
 
   h1{
@@ -59,19 +59,19 @@
     max-width:700px;
   }
 
-  /* separação em onda */
+  /* separação onda fina */
   .wave-container{
     width:100%;
-    height:80px;
+    height:30px;
     overflow:hidden;
     position:relative;
   }
 
   .wave{
-    background:var(--wave);
-    width:200%;
-    height:100%;
-    border-radius: 100% 100% 0 0;
+    font-family:monospace;
+    font-size:28px;
+    color:var(--wave);
+    white-space:nowrap;
     position:absolute;
     top:0;
     left:0;
@@ -93,7 +93,13 @@
     padding:14px 20px;
     border-radius:12px;
     width:fit-content;
-    margin-top:-40px; /* puxando sobre a onda */
+    margin-top:40px; /* mais longe da separação */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .player:hover{
+    transform: translateY(-3px);
+    box-shadow:0 10px 25px rgba(176,101,255,0.4);
   }
 
   .player img{
@@ -119,6 +125,42 @@
     font-size:14px;
   }
 
+  /* botões play/pause fake */
+  .buttons{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-left:20px;
+  }
+
+  .button{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:var(--accent-2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .button:hover{
+    transform: scale(1.2);
+    background:var(--accent);
+  }
+
+  .button::before{
+    content:'▶'; /* play */
+    color:#fff;
+    font-size:14px;
+  }
+
+  .button.pause::before{
+    content:'❚❚'; /* pause */
+    font-size:12px;
+  }
+
   footer{
     margin:40px 0;
     font-size:14px;
@@ -137,7 +179,7 @@
 
     <!-- separação onda -->
     <div class="wave-container">
-      <div class="wave"></div>
+      <div class="wave">~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~</div>
     </div>
 
     <!-- player visual -->
@@ -145,7 +187,11 @@
       <img src="https://i.imgur.com/7RkQ7zX.jpg" alt="Capa da música">
       <div class="player-info">
         <span>It's Going Down Now</span>
-        <small>Persona</small>
+        <small>Persona 3 Reload</small>
+      </div>
+      <div class="buttons">
+        <div class="button"></div>
+        <div class="button pause"></div>
       </div>
     </div>
 
