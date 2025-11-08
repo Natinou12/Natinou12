@@ -1,170 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Natinou S.</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Roboto:400">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natinou</title>
   <style>
     body {
-      background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
-      color: #fff;
-      font-family: 'Roboto', Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      min-height: 100vh;
-    }
-    .container {
-      max-width: 700px;
-      margin: 40px auto;
-      background: rgba(15, 13, 29, 0.88);
-      border-radius: 24px;
-      box-shadow: 0 4px 50px #6a00ff30;
-      padding: 32px;
-    }
-    h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.4rem;
+      font-family: sans-serif;
+      background-color: #f4f4f4;
       text-align: center;
-      letter-spacing: 2px;
-      margin-bottom: 18px;
-    }
-    .star {
-      display: block;
-      margin: 0 auto 22px auto;
-      width: 64px;
-      height: 64px;
-      animation: spin 2.5s infinite linear;
-    }
-    @keyframes spin {
-      100% { transform: rotate(360deg); }
-    }
-    .about {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 1.13em;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .about span {
-      background: #3218d5;
-      border-radius: 18px;
-      padding: 3px 12px;
-      font-weight: bold;
-      margin-right: 2px;
-      display: flex;
-      align-items: center;
-    }
-    .about img {
-      width: 24px;
-      height: 24px;
-      margin-right: 6px;
-      filter: drop-shadow(0 0 2px #fff7);
-    }
-    .section-title {
-      font-size: 1.23rem;
-      margin: 24px 0 10px 0;
-      letter-spacing: 0.5px;
-      font-weight: bold;
-      border-bottom: 2px solid #6a00ff;
-      padding-bottom: 2px;
-    }
-    .games {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      margin-bottom: 22px;
-      flex-wrap: wrap;
-    }
-    .game-icon {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 90px;
-      transition: box-shadow 0.3s, transform 0.2s;
-      cursor: pointer;
-      border-radius: 14px;
-      background: #23213a80;
-      box-shadow: 0 2px 18px #23213a40;
-      padding: 10px 0 8px 0;
-      text-decoration: none;
-      color: inherit;
-      position: relative;
-    }
-    .game-icon:hover {
-      box-shadow: 0 0 20px 3px #b62eff, 0 2px 18px #6a00ff55;
-      background: #42128a;
-      transform: scale(1.09);
-      color: #b62eff;
-    }
-    .game-icon img {
-      width: 45px;
-      height: 45px;
-      margin-bottom: 7px;
-      border-radius: 50%;
-      background: #29266a;
-      box-shadow: 0 0 8px #6a00ff90;
-      transition: box-shadow 0.3s;
-      filter: drop-shadow(0 0 1px #b62effaa);
-    }
-    .game-icon:hover img { box-shadow: 0 0 24px #b62effbb; }
-    .final-msg {
-      text-align: center;
-      font-size: 1.2em;
-      margin: 20px 0 12px 0;
-      font-weight: 400;
-    }
-    .github-note {
-      text-align: center;
-      font-size: 0.92em;
-      color: #e2d0ff;
-      background: #311f4c;
-      margin: 10px auto 0 auto;
-      padding: 6px 24px;
-      border-radius: 14px;
-      display: inline-block;
-    }
-    @media (max-width: 600px) {
-      .container { padding: 8px 4vw; }
-      .games { gap: 14px; }
-      .game-icon { width: 82px; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Star_full_white.svg/1024px-Star_full_white.svg.png" alt="Star Icon" class="star">
-    <h1>Natinou S.</h1>
-    
-    <div class="section-title">Sobre mim</div>
-    <div class="about">
-      <span><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="Brasil">Brasileiro</span>
-      <span>Programação</span>
-      <span>Strogonoff</span>
-      <span>Jogos</span>
-      <span>Música</span>
-      <span>Xadrez</span>
-    </div>
-    
-    <div class="section-title">Jogos que estou jogando atualmente</div>
-    <div class="games">
-      <a href="https://store.steampowered.com/app/105600/Terraria/" class="game-icon" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Terraria_Logo.png" alt="Terraria">
-        Terraria
-      </a>
-      <a href="https://store.steampowered.com/app/1307550/Core_Keeper/" class="game-icon" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Core_Keeper_Game_Logo.jpg" alt="Core Keeper">
-        Core Keeper
-      </a>
-      <a href="https://minecraft.net/" class="game-icon" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_logo.png" alt="Minecraft">
-        Minecraft
-      </a>
-    </div>
-    
-    <div class="final-msg">É isso :)</div>
-    <div class="github-note">Feito usando o Github Pages</div>
+  <div style="position: relative; width: 100%; height: 0; padding-top: 112.4451%;
+   padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+   border-radius: 8px; will-change: transform;">
+    <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+      src="https://www.canva.com/design/DAG4JbarIsg/C_4zqRs7qxds6qWPvhD63Q/view?embed" allowfullscreen allow="fullscreen">
+    </iframe>
   </div>
+  <p>
+    <a href="https://www.canva.com/design/DAG4JbarIsg/C_4zqRs7qxds6qWPvhD63Q/view?utm_content=DAG4JbarIsg&utm_campaign=designshare&utm_medium=embeds&utm_source=link" 
+       target="_blank" rel="noopener">Natinou</a> de Natinou
+  </p>
 </body>
 </html>
