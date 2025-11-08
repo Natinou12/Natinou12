@@ -5,35 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Natinou</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
-      background: #000; /* cor de fundo opcional, pode trocar */
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-    .canva-embed {
+
+    /* Caixa do Canva */
+    .canva-box {
       position: relative;
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      max-width: 1000px;
+      box-shadow: 0 2px 8px rgba(63,69,81,0.16);
+      border-radius: 8px;
       overflow: hidden;
     }
-    .canva-embed iframe {
-      position: absolute;
+
+    iframe {
       width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
+      height: 80vh;
       border: none;
+      display: block;
+    }
+
+    /* Esconde o crédito "Natinou de Natinou" */
+    .canva-credit {
+      display: none;
+    }
+
+    /* Estrela girando */
+    .estrela {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 50px;
+      color: gold;
+      animation: girar 5s linear infinite;
+    }
+
+    @keyframes girar {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
   </style>
 </head>
 <body>
-  <div class="canva-embed">
+  <div class="canva-box">
     <iframe 
       src="https://www.canva.com/design/DAG4JbarIsg/C_4zqRs7qxds6qWPvhD63Q/view?embed" 
-      allowfullscreen 
-      allow="fullscreen">
+      allowfullscreen>
     </iframe>
+    <div class="estrela">⭐</div>
+    <p class="canva-credit">Natinou de Natinou</p>
   </div>
 </body>
 </html>
